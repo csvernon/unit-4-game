@@ -1,0 +1,67 @@
+    .crystal-image {
+      width: 150px;
+      height: 150px;
+      margin-left: 20px;
+      margin-top: 20px;
+      
+    }
+    body {
+        background-image: url("../84227.jpg");
+        color: white;
+
+    }
+    .title {
+        border: orange solid 5px;
+        width: 250px;
+        background-color: orange;
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 100px;
+        text-align: center;
+        padding-top: 25px;
+    }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0px;
+      }
+    .instructions {
+        border: rgb(255, 194, 153) solid 5px;
+        width: 400px;
+        background-color: rgb(255, 194, 153);
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 350px;
+        padding-top: 25px;
+        color: green;
+    }
+    .randNum {
+        border: rgb(0, 255, 191) solid 5px;
+        width: 450px;
+        background-color: rgb(0, 255, 191);
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 150px;
+        padding-top: 25px;
+        color: black;
+        float: left;
+    }
+    .score {
+        border: blue solid 5px;
+        width: 250px;
+        background-color: blue;
+        margin-left: 20px;
+        margin-top: 20px;
+        float: left;
+        height: 150px;
+    }
+    .counter {
+        border: turquoise solid 5px;
+        width: 350px;
+        background-color: turquoise;
+        margin-left: 20px;
+        margin-top: 20px;
+        height: 50px;
+        font-size: 25px;
+        }

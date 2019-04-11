@@ -1,45 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>simple crystal game</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="assets/javascript/game.js" async></script>
+    <title>simple crystal game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js" async></script>
 </head>
+
 <body>
-        <h3 class="title">Crystals Collector!</h3>
-        <div class="instructions">
-        <p1>You will be given a random number at the start of the game.</p1>
-        <br>
-        <p2>There are four crystals below. By clicking on a crystal You
-            will add a specific amount of points to your total score.
-        </p2>
-        <br>
-        <p3>You win the game by matching your total score to random number,
-            you lose the game if your total score goes above the random number.
-        </p3>
-        <br>
-        <p4>The value of each crystal is hidden from you until you click on it.</p4>
-        <br>
-        <p5>Each time when the game starts, the game will change the value of each crystal.</p5>
+
+
+    <container>
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <div class="col-xs-12 col-sm-6 col-lg-7" id="sidebar">
+                <div class="row">
+                    <h3 class="title">Crystals Collector!</h3>
+                    <div class="row">
+                        <div class="instructions">
+                            <p1>You will be given a random number at the start of the game.</p1>
+                            <br>
+                            <p2>There are four crystals to the right. By clicking on a crystal You
+                                will add a specific amount of points to your total score.
+                            </p2>
+                            <br>
+                            <p3>You win the game by matching your total score to random number,
+                                you lose the game if your total score goes above the random number.
+                            </p3>
+                            <br>
+                            <p4>The value of each crystal is hidden from you until you click on it.</p4>
+                            <br>
+                            <p5>Each time when the game starts, the game will change the value of each crystal.</p5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="randNum">
+                            <h1>Number to Guess: <span id="number-to-guess"></span></h1>
+                        </div>
+                        <div class="score">
+                            <h2 id="outcome"></h2>
+                            <h2 id="wins">Wins: </h2>
+                            <h2 id="losses">Losses: </h2>
+                            <h2 class="counter">Your current score is: </h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-5" id="sidebar">
+                <div id="crystals"></div>
+
+            </div>
         </div>
-        <together>
-        <div class="randNum">
-        <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-        </div>
-        <div class="score">
-            <h2 id="outcome"></h2>
-            <h2 id="wins">Wins: </h2>
-            <h2 id="losses">Losses: </h2>
-        </div>
-        </together>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <div id="crystals"></div>
-        <div class="counter">Your current score is: </div>
+    </container>
+
+
 </body>
+
 </html>

@@ -22,6 +22,44 @@
     number4 = Math.floor(Math.random() * (+13 - +1)) + +1; 
     counter = 0;
     $("#number-to-guess").text(targetNumber);
+    var numberOptions = [number1, number2, number3, number4];
+    var images = [image1, image2, image3, image4]
+    for (var i = 0; i < numberOptions.length; i++) {
+  
+      var imageCrystal = $("<img>");
+  
+      imageCrystal.addClass("crystal-image");
+  
+      imageCrystal.attr("src", images[i]);
+  
+      imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+  
+      $("#crystals").append(imageCrystal);
+    }
+    $(".crystal-image").on("click", function() {
+
+      var crystalValue = ($(this).attr("data-crystalvalue"));
+      crystalValue = parseInt(crystalValue);
+      counter += crystalValue;
+      document.querySelector('.counter').innerHTML= "Your current score is: " + counter;
+  
+      if (counter === targetNumber) {
+        wins++
+        document.querySelector('#wins').innerHTML= "Wins: " + wins;
+        document.querySelector('#outcome').innerHTML= "You won!!";
+        $("#crystals").empty();
+        reset();
+      }
+  
+      else if (counter >= targetNumber) {
+        losses++
+        document.querySelector('#losses').innerHTML= "Losses: " + losses;
+        document.querySelector('#outcome').innerHTML= "You lost!!";
+        $("#crystals").empty();
+        reset();
+      }
+  
+    });    
   };
   
   $("#number-to-guess").text(targetNumber);
@@ -51,6 +89,7 @@
       wins++
       document.querySelector('#wins').innerHTML= "Wins: " + wins;
       document.querySelector('#outcome').innerHTML= "You won!!";
+      $("#crystals").empty();
       reset();
     }
 
@@ -58,6 +97,7 @@
       losses++
       document.querySelector('#losses').innerHTML= "Losses: " + losses;
       document.querySelector('#outcome').innerHTML= "You lost!!";
+      $("#crystals").empty();
       reset();
     }
 
